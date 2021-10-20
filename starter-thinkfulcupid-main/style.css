@@ -1,0 +1,192 @@
+/* -------  General Styles ------- */
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #6b1a22;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0 10px 15px 10px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+p {
+  line-height: 1.5em;
+  margin: 0;
+}
+
+section {
+  padding: 20px;
+}
+
+section.alternate-background {
+  background-color: #a35766;
+  color: #ecdbc9;
+}
+
+main img {
+  width: 100%;
+}
+
+/* ---  Groups & Items --- */
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  flex: 1;
+  margin: 10px;
+}
+
+.item-double {
+  flex: 2;
+}
+
+/* -------  Navigation ------- */
+
+header {
+  background-color: #83092e;
+  padding: 20px 20px 0 20px;
+  text-align: center;
+}
+
+.logo {
+  font-family: "Tangerine", cursive;
+  font-size: 72px;
+  color: #ecdbc9;
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+header nav ul li a {
+  color: #ecdbc9;
+  text-decoration: none;
+  padding: 0 20px 0 0;
+}
+
+header nav ul li a:hover {
+  color: #bdbdbd;
+  text-decoration: none;
+}
+
+header nav {
+  /* Changes the display property from its default to `flex`. */
+  display: flex;
+  /* Centers an element defined as `display: flex`. */
+  justify-content: center;
+}
+
+header nav ul {
+  /* Changes the display property from its default to `flex`. */
+  display: flex;
+  /*
+    You want the navigation to display in a single row. This is 
+    the default value for `display: flex`, so you don't need
+    to define its `flex-direction` in this case.
+  */
+
+  /*
+    Removes the default padding to the left of the
+    unordered list.
+  */
+  padding-left: 0;
+
+  /*
+    Removes the bullet points from the list items within the 
+    unordered list.
+  */
+  list-style: none;
+}
+
+nav {
+  padding-bottom: 5px;
+}
+
+/* -------  Join Form ------- */
+form {
+  border: 2px solid #6b1a22;
+  padding: 10px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form select,
+form input {
+  margin-bottom: 20px;
+  width: 180px;
+}
+
+form button {
+  background-color: #83092e;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  padding: 15px;
+  width: 100%;
+}
+
+form div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav ul div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 8px;
+}
+
+/* -------  Footer ------- */
+
+footer {
+  background-color: #83092e;
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* -------  Media Query ------- */
+
+@media all and (min-width: 480px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+  
+  .logo {
+    font-size: 42px;
+    margin: 15px 0 15px 20px;
+  }
+
+  header nav ul {
+    padding-top: 15px;
+  }
+
+  header nav ul li {
+    align-items: center;
+  }
+
+  .group {
+    align-items: center;
+    flex-direction: row;
+  }
+}
